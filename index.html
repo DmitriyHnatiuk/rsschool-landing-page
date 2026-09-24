@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css?family=Inter" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+
+
+  <script src="./js/theme.js" defer></script>
+  <script src="index.js" defer></script>
+
+  <title>Landing page</title>
+  <script>
+    if (localStorage.getItem('site-theme') === 'dark') {
+      document.documentElement.classList.add('dark-theme');
+    }
+  </script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__container">
+      <div class="logo">
+        <a href="index.html" class="logo__icon" aria-label="Logo"></a>
+      </div>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="#favorit">Favorite coffee</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#mobile">Mobile app</a></li>
+          <li><a href="#contact">Contact us</a></li>
+        </ul>
+
+      </nav>
+      <div class="header__button__container">
+        <div class="theme-switcher">
+          <input type="checkbox" id="theme-toggle" class="theme-switcher__input">
+          <label for="theme-toggle" class="theme-switcher__label">
+            <span class="theme-switcher__icon theme-switcher__icon--sun">
+              &#9728;
+            </span>
+            <span class="theme-switcher__icon theme-switcher__icon--moon">
+              &#9789;
+            </span>
+          </label>
+        </div>
+
+        <a href="./pages/menu.html" class="btn-menu">Menu</a>
+        <button type="button" class="btn-menu-mob"></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="hero">
+    <div class="hero__container">
+      <h1 class="hero__title"><strong class="accent"><em>Enjoy</em></strong> premium coffee at our charming cafe</h1>
+      <h2 class="hero__text">With its inviting atmosphere and delicious coffee options, the Coffee House Resource
+        is
+        a popular destination for coffee lovers and those seeking a warm and inviting space to enjoy their favorite
+        beverage.</h2>
+      <a href="./pages/menu.html" class="hero__btn">Menu</a>
+    </div>
+  </main>
+
+
+  <footer class="footer" id="footer">
+    <div class="footer__container" id="contact">
+      <div class="footer__brand">
+        <div class="footer__slogan">
+          <h2 class="footer__title"> Sip, Savor, Smile</h2>
+          <h2 class="footer__title">
+            <strong class=" accent">It's coffee time!</strong>
+          </h2>
+        </div>
+        <div class="footer__socials">
+          <a href="https://twitter.com" target="_blank" class="footer__socials--twitter" aria-label="Twitter"></a>
+
+          <a href="https://instagram.com" target="_blank" class="footer__socials--instagram" aria-label="Instagram"></a>
+
+          <a href="https://facebook.com" target="_blank" class="footer__socials--facebook" aria-label="Facebook"></a>
+        </div>
+      </div>
+
+      <div class="footer__contacts">
+        <h3 class="footer__contacts--title">Contact us</h3>
+
+        <div class="footer__contacts--list">
+          <a href="https://maps.app.goo.gl/gk7T9Ak3BX2JQmJ17" target="_blank" class="footer__contacts--map">
+            <span class="contact">8558 Green Rd., LA</span>
+          </a>
+
+          <a href="tel:+16035550123" class="footer__contacts--tel">
+            <span class="contact">+1 (603) 555-0123</span>
+          </a>
+
+          <h3 class="footer__contacts--time">
+            <span class="contact">Mon-Sat: 9:00-23:00</span>
+          </h3>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

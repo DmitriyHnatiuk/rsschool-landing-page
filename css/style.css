@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all .5s;
+  text-decoration: none;
+  list-style: none;
+  color: var(--main_color_text);
+}
+
+body {
+  background-color: var(--color-bg-page);
+  color: var(--color-text-primary);
+  font-family: 'Inter', sans-serif;
+  font-size: 62.5%;
+  line-height: 1.5;
+  margin: 1rem 1.5rem;
+  font-weight: 600;
+  max-width: 180rem;
+}
+
+@media (min-width: 2930px) {
+  body {
+    margin: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .btn-menu-mob {
+    display: flex;
+  }
+  
+  .btn-menu {
+    display: none; 
+  }
+  
+}
+

@@ -89,11 +89,15 @@ strong.accent {
 .btn-menu::after {
   content: "";
     display: inline-block;
-  background: url(../assets/icons/coffee-cup.svg)  no-repeat center / contain;
+    -webkit-mask: url('../assets/icons/coffee-cup.svg') no-repeat center / contain;
+  mask: url('../assets/icons/coffee-cup.svg') no-repeat center / contain;
   width: 3rem;
   height: 2rem;
   position: relative;
   top: 4px;
+  background-color: var(--color-text-primary);
+
+
 }
 
 .btn-menu-mob{

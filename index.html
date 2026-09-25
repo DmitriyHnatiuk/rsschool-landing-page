@@ -6,11 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link href="https://fonts.googleapis.com/css?family=Inter" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/components.css">
-
 
   <script src="./js/theme.js" defer></script>
   <script src="index.js" defer></script>
@@ -25,13 +21,16 @@
 
 <body>
   <header class="header">
+    <input type="checkbox" id="mobile-menu-bth" class="menu__mobile--input" />
+    <label for="mobile-menu-bth" class="menu__mobile--btn"><span class="menu__mobile--icon">&nbsp;</span></label>
+    <span class="menu__mobile--background">&nbsp;</span>
     <div class="header__container">
       <div class="logo">
         <a href="index.html" class="logo__icon" aria-label="Logo"></a>
       </div>
       <nav class="nav">
         <ul class="nav__list">
-          <li><a href="#favorit">Favorite coffee</a></li>
+          <li><a href="favorite">Favorite coffee</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#mobile">Mobile app</a></li>
           <li><a href="#contact">Contact us</a></li>
@@ -52,7 +51,6 @@
         </div>
 
         <a href="./pages/menu.html" class="btn-menu">Menu</a>
-        <button type="button" class="btn-menu-mob"></button>
       </div>
     </div>
   </header>

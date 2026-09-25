@@ -8,23 +8,35 @@
   justify-content: center;
   align-items: center;
   overflow: auto;
+  @media (min-width: 769px){
+    justify-content: space-between;
+  }
 }
 
 .slider__list {
   display: flex;
+  gap: 5rem;
+  width: 80%;
 
   .slider__list__item {
     min-width: 100%;
-    padding: 0 10rem;
+
+    img{
+      max-width: 40%;
+      min-width: 30%;
+      @media (max-width: 1200px){
+        max-width: 70%;
+      }
+    }
   }
 }
 .slider--buttons {
     width: 100%;
-    height: 50px;
+    height: 5rem;
     background: var(--color-bg-page);
     z-index: 3;
     position: relative;
-    top: -33px;
+    top: -4rem;
 }
 
 .slider--buttons > span:not(:last-child) {
@@ -34,7 +46,7 @@
 .slider__indicators {
   display: inline-block;
   width: 4rem;
-  height: 5px;
+  height: .5rem;
   background-color: var(--color-border-primary);
 }
 

@@ -1,6 +1,7 @@
 .u-text-xl {
   font-size: 3.5rem;
   font-weight: 600;
+  line-height: 1.2;
 }
 
 .u-text-l {
@@ -35,14 +36,18 @@
   padding-bottom: 5rem;
 }
 
-.u-box-30 {
+.u-box-40 {
   display: inline-block;
-  width: 30%;
+  max-width: 40%;
+
+  @media (max-width: 1450px){
+    max-width: 80%;
+  }
 }
 
 .u-round-button {
-  width: 48px;
-  height: 48px;
+  width: 4rem;
+  height: 4rem;
   border-radius: 50%;
   border: 1px solid var(--color-border-inverse);
   background-color: inherit;
@@ -50,13 +55,17 @@
 
   span {
     display: inline-block;
-    transform: translateY(-12%); 
+    transform: translateY(-.6rem); 
+}
+
+@media (max-width: 768px) {
+  display: none;
 }
 }
 
 @media (max-width: 768px){
-  .u-box-30 {
-    width: 80vw;
+  .u-box-40 {
+    width: 70vw;
   }
 
   .u-text-l {
@@ -66,5 +75,17 @@
   .u-text-m {
   font-size: 1rem;
   font-weight: 300;
+}
+
+.u-margin-top-m {
+  margin-top: 3rem;
+}
+
+.u-margin-top-s {
+  margin-top: 1.5rem;
+}
+
+.u-margin-bottom-m {
+  margin-bottom: 2rem;
 }
 }

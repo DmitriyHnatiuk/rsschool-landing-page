@@ -24,10 +24,6 @@
   width: 50%;
 }
 
-.footer {
-  margin-bottom: 4rem;
-}
-
 .footer__container {
   background-color: var(--color-bg-container);
   border-radius: 4rem;

@@ -1,0 +1,70 @@
+.u-text-xl {
+  font-size: 3.5rem;
+  font-weight: 600;
+}
+
+.u-text-l {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+
+.u-text-m {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.u-accent {
+  color: var(--color-text-accent);
+  font-style: italic;
+}
+
+.u-margin-top-m {
+  margin-top: 5rem;
+}
+
+.u-margin-top-s {
+  margin-top: 2.5rem;
+}
+
+.u-margin-bottom-m {
+  margin-bottom: 5rem;
+}
+
+.u-padding-bottom-l {
+  padding-bottom: 5rem;
+}
+
+.u-box-30 {
+  display: inline-block;
+  width: 30%;
+}
+
+.u-round-button {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border-inverse);
+  background-color: inherit;
+  color: var(--color-border-inverse);
+
+  span {
+    display: inline-block;
+    transform: translateY(-12%); 
+}
+}
+
+@media (max-width: 768px){
+  .u-box-30 {
+    width: 80vw;
+  }
+
+  .u-text-l {
+    font-size: 1.8rem;
+  }
+
+  .u-text-m {
+  font-size: 1rem;
+  font-weight: 300;
+}
+}

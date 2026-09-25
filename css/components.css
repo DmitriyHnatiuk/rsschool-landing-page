@@ -7,11 +7,6 @@
   outline: none;
 }
 
-strong.accent {
-  color: var(--color-text-accent);
-  font-style: italic;
-}
-
 .dark-theme .logo__icon {
   background-image: url('../assets/icons/logo-dark.svg');
 }

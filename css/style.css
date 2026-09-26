@@ -2,9 +2,11 @@
 @import "./reset.css";
 
 @import "./utilities.css";
-@import "./components.css";
 @import "./layout.css";
 
+@import "./header.css";
+@import "./hero.css";
 @import "./favorite.css";
-@import "./adout.css";
+@import "./about.css";
 @import "./mobile.css";
+@import "./footer.css";

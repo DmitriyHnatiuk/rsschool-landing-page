@@ -1,0 +1,114 @@
+
+
+.footer__container {
+  background-color: var(--color-bg-container);
+  border-radius: 4rem;
+  padding: 6rem 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  @media (max-width: 48em)  {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3rem 5%;
+  }
+}
+
+.footer__brand {
+  flex-grow: 1;
+}
+
+.footer__socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer__slogan {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: var(--color-text-inverse);
+}
+
+.footer__socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--color-text-inverse);
+  color: var(--color-text-inverse);
+  transition: all 0.3s
+}
+
+.footer__socials a::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: currentColor;
+}
+
+.footer__socials .footer__socials--twitter::before {
+  -webkit-mask: url('../assets/icons/twitter.svg') no-repeat center / contain;
+  mask: url('../assets/icons/twitter.svg') no-repeat center / contain;
+}
+
+.footer__socials .footer__socials--instagram::before {
+  -webkit-mask: url('../assets/icons/instagram.svg') no-repeat center / contain;
+  mask: url('../assets/icons/instagram.svg') no-repeat center / contain;
+}
+
+.footer__socials .footer__socials--facebook::before {
+  -webkit-mask: url('../assets/icons/facebook.svg') no-repeat center / contain;
+  mask: url('../assets/icons/facebook.svg') no-repeat center / contain;
+}
+
+.footer__contacts {
+  color: var(--color-text-inverse);
+  flex-grow: 2;
+}
+
+.footer__contacts--title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.footer__contacts--list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.footer__contacts--list a,
+.footer__contacts--time {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.footer__contacts--list a::before,
+.footer__contacts--time::before {
+  content: '';
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.2rem;
+  background-color: currentColor;
+  margin-right: 0.3rem;
+}
+
+.footer__contacts--map::before {
+  -webkit-mask: url('../assets/icons/pin-alt.svg') no-repeat center / contain;
+  mask: url('../assets/icons/pin-alt.svg') no-repeat center / contain;
+}
+
+.footer__contacts--tel::before {
+  -webkit-mask: url('../assets/icons/path.svg') no-repeat center / contain;
+  mask: url('../assets/icons/path.svg') no-repeat center / contain;
+}
+
+.footer__contacts--time::before {
+  -webkit-mask: url('../assets/icons/time.svg') no-repeat center / contain;
+  mask: url('../assets/icons/time.svg') no-repeat center / contain;
+}

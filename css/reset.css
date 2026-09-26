@@ -16,6 +16,15 @@ html {
   color: inherit;
 }
 
+.btn {
+  padding: 0;
+  background: none;
+  border: none;
+  font: inherit;
+  color: inherit;
+  outline: none;
+}
+
 body {
   background-color: var(--color-bg-page);
   color: var(--color-text-primary);

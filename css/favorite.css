@@ -24,7 +24,7 @@
     img{
       max-width: 40%;
       min-width: 30%;
-      @media (max-width: 1200px){
+      @media (max-width: 75em){
         max-width: 70%;
       }
     }
@@ -36,7 +36,7 @@
     background: var(--color-bg-page);
     z-index: 3;
     position: relative;
-    top: -4rem;
+    top: -5rem;
 }
 
 .slider--buttons > span:not(:last-child) {

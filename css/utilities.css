@@ -1,3 +1,8 @@
+.u-text-xxl {
+  font-size: 4.5rem;
+  font-weight: 800;
+}
+
 .u-text-xl {
   font-size: 3.5rem;
   font-weight: 600;
@@ -11,7 +16,7 @@
 
 
 .u-text-m {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   font-weight: 300;
 }
 
@@ -40,7 +45,7 @@
   display: inline-block;
   max-width: 40%;
 
-  @media (max-width: 1450px){
+  @media (max-width: 90.6em){
     max-width: 80%;
   }
 }
@@ -55,37 +60,17 @@
 
   span {
     display: inline-block;
-    transform: translateY(-.6rem); 
+    transform: translateY(-.4rem); 
+    line-height: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 48em) {
   display: none;
 }
 }
 
-@media (max-width: 768px){
+@media (max-width: 48em){
   .u-box-40 {
     width: 70vw;
   }
-
-  .u-text-l {
-    font-size: 1.8rem;
-  }
-
-  .u-text-m {
-  font-size: 1rem;
-  font-weight: 300;
-}
-
-.u-margin-top-m {
-  margin-top: 3rem;
-}
-
-.u-margin-top-s {
-  margin-top: 1.5rem;
-}
-
-.u-margin-bottom-m {
-  margin-bottom: 2rem;
-}
 }

@@ -21,9 +21,13 @@
 
 <body>
   <header class="header">
-    <input type="checkbox" id="mobile-menu-bth" class="menu__mobile--input" />
-    <label for="mobile-menu-bth" class="menu__mobile--btn"><span class="menu__mobile--icon">&nbsp;</span></label>
+    <input type="checkbox" id="mobile-menu-bth" class="menu__mobile--input">
+
+    <label for="mobile-menu-bth" class="menu__mobile--btn">
+      <span class="menu__mobile--icon">&nbsp;</span>
+    </label>
     <span class="menu__mobile--background">&nbsp;</span>
+
     <div class="header__container">
       <div class="logo">
         <a href="index.html" class="logo__icon" aria-label="Logo"></a>
@@ -59,12 +63,14 @@
 
     <section class="hero">
       <div class="hero__container">
-        <h1 class="hero__title"><strong class="u-accent"><em>Enjoy</em></strong> premium coffee at our charming cafe
+        <h1 class="hero__title u-text-xxl">
+          <strong class="u-accent">Enjoy</strong>
+          premium coffee at our charming cafe
         </h1>
-        <h2 class="hero__text">With its inviting atmosphere and delicious coffee options, the Coffee House Resource
-          is
-          a popular destination for coffee lovers and those seeking a warm and inviting space to enjoy their favorite
-          beverage.</h2>
+        <h2 class="hero__text u-text-m">
+          With its inviting atmosphere and delicious coffee options, the Coffee House Resource is a popular destination
+          for coffee lovers and those seeking a warm and inviting space to enjoy their favorite beverage.
+        </h2>
         <a href="./pages/menu.html" class="hero__btn">Menu</a>
       </div>
     </section>
@@ -78,12 +84,12 @@
       <div class="favorite__slider u-margin-top-s">
         <div class="favorite__slider__container">
 
-          <button type="button" class="u-text-l u-round-button"><span>&larr;</span></button>
+          <button id="slider-prev" type="button" class="u-text-l u-round-button"><span>&larr;</span></button>
 
           <ul class="slider__list u-padding-bottom-l">
 
             <li class="slider__list__item">
-              <img src="./assets/images/coffee-slider-1.png" alt="coffee slider 1 img">
+              <img src="./assets/images/coffee-slider-1.png" alt="coffee slider 1 img" loading="lazy">
               <h3 class="slider__item--title u-margin-top-s u-text-l">S'mores Frappuccino</h3>
               <p class="u-text-m u-margin-top-s u-box-40">
                 This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat
@@ -93,7 +99,7 @@
             </li>
 
             <li class="slider__list__item">
-              <img src="./assets/images/coffee-slider-2.png" alt="coffee slider 2 img">
+              <img src="./assets/images/coffee-slider-2.png" alt="coffee slider 2 img" loading="lazy">
               <h3 class="slider__item--title u-margin-top-s u-text-l">Caramel Macchiato</h3>
               <p class="u-text-m u-margin-top-s u-box-40">
                 Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream under whipped thick
@@ -103,7 +109,7 @@
             </li>
 
             <li class="slider__list__item">
-              <img src="./assets/images/coffee-slider-3.png" alt="coffee slider 3 img">
+              <img src="./assets/images/coffee-slider-3.png" alt="coffee slider 3 img" loading="lazy">
 
               <h3 class="slider__item--title u-margin-top-s u-text-l">Ice coffee</h3>
               <p class="u-text-m u-margin-top-s u-box-40">
@@ -113,21 +119,64 @@
             </li>
           </ul>
 
-          <button type="button" class="u-text-l u-round-button">
+          <button id="slider-next" type="button" class="u-text-l u-round-button">
             <span>&rarr;</span>
           </button>
 
         </div>
 
-        <div class="slider--buttons">
-          <span type="button" class="slider__indicators active">&nbsp;</span>
-          <span type="button" class="slider__indicators">&nbsp;</span>
-          <span type="button" class="slider__indicators">&nbsp;</span>
+        <div id="slider-pagination" class="slider--buttons">
+          <span data-index="1" class="slider__indicators active">&nbsp;</span>
+          <span data-index="2" class="slider__indicators">&nbsp;</span>
+          <span data-index="3" class="slider__indicators">&nbsp;</span>
         </div>
 
       </div>
     </section>
 
+    <section class="about" id="about">
+      <h2 class="about__text u-text-xl">
+        Resource is <span class="u-accent">the perfect and cozy place</span> where you can enjoy a variety of hot
+        beverages, relax, catch up with friends, or get some work done.
+      </h2>
+      <div class="about__container">
+        <img class="about-img" src="./assets/images/about-1.jpg" alt="Img about 1" loading="lazy">
+        <img class="about-img" src="./assets/images/about-2.jpg" alt="Img about 2" loading="lazy">
+        <img class="about-img" src="./assets/images/about-3.jpg" alt="Img about 3" loading="lazy">
+        <img class="about-img" src="./assets/images/about-4.jpg" alt="Img about 4" loading="lazy">
+      </div>
+    </section>
+
+
+
+    <section class="mobile" id="mobile">
+      <div class="mobile__container">
+        <h2 class="mobile--title u-text-xl">
+          <span class="u-accent">Download</span> our app to start ordering
+        </h2>
+        <p class="mobile--text u-text-m">
+          Download the resource app today and experience the comfort of ordering your favorite coffee from wherever you
+          are.
+        </p>
+
+        <div class="mobile__link__container">
+          <a href="#" class="mobile__link app-store">
+            <p class="link-title">
+              <span class="u-text-s">Available on the</span>
+              <span class="u-text-m">App Store</span>
+            </p>
+          </a>
+
+          <a href="#" class="mobile__link google-play">
+            <p class="link-title">
+              <span class="u-text-s">Available on</span>
+              <span class="u-text-m">Google Play</span>
+            </p>
+          </a>
+        </div>
+      </div>
+      <img class="mobile--img" src="./assets/images/mobile-screens.png" alt="mobile" loading="lazy">
+    </section>
   </main>
 
   <footer class="footer" id="footer">

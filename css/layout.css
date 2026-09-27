@@ -1,0 +1,25 @@
+
+body {
+  background-color: var(--color-bg-page);
+  color: var(--color-text-primary);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  margin: 1rem 1.5rem;
+  font-weight: 600;
+  max-width: 180rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 137rem) {
+    margin: 1rem auto;
+  }
+  
+  @media (min-width: 183em) {
+    margin: auto;
+  }
+}
+
+main {
+  flex: 1;
+}

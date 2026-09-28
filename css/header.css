@@ -201,7 +201,7 @@
 .menu__mobile--input:checked~.header__container .header__button__container .btn-menu {
   @media (max-width: 48em){
     position: fixed;
-    bottom: 2rem;
+    top: 50%;
     left: 50%;
     display: inline-block;
     z-index: 1050;

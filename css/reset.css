@@ -26,3 +26,7 @@ html {
   color: inherit;
   outline: none;
 }
+
+.is-hidden {
+  display: none;
+}

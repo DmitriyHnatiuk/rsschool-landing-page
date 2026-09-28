@@ -110,7 +110,7 @@
   right: 0;
   z-index: 50;
   background-color: var(--color-bg-page);
-  max-height: 100vh;
+  min-height: 100vh;
   width: 100%;
   transform: scale(0);
   transition: opacity .2s;

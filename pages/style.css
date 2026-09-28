@@ -182,9 +182,6 @@
   }
 }
 
-.modal__container {
-  display: none;
-}
 .modal__background {
   position: fixed;
   z-index: 1000;
@@ -200,7 +197,7 @@
   z-index: 1001;
   top: 50%;
   left: 50%;
-  background-color: var(--color-bg-container);
+  background-color: var(--color-bg-page);
   max-width: 50%;
   max-height: 100%;
   transform: translate(-50%, -50%);
@@ -275,7 +272,7 @@
     }
   } 
   &:checked +.modal__radio-label {
-    background-color: var(--color-bg-page);
+    background-color: var(--color-bg-container);
 
     & .type {color:var(--color-text-inverse);}
     .value {background-color: var(--color-border-primary);}

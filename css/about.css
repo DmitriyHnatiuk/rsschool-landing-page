@@ -1,0 +1,73 @@
+.about__text {
+  letter-spacing: -1px;
+  margin-bottom: 4rem;
+}
+
+.about__container {
+  display: grid;
+  grid-template-columns: 49% 49%; 
+  grid-template-rows: 30% 30% 30%; 
+  gap: 3.5rem;   
+  width: 99%;                  
+  grid-template-areas: 
+    "img1 img3"
+    "img1 img4"
+    "img2 img4";
+  
+    @media (max-width:48em) { 
+      width: 100%;
+      gap: 3.5rem 0;
+      grid-template-columns: 1fr 98% 1fr; 
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: 
+        "q img1 b"
+        "q img4 b";
+    }
+}
+
+.about__container > .about-img {
+  width: 100%;
+  object-fit: cover;   
+  align-self: stretch;
+  border-radius: 1rem;
+  box-shadow: .1rem .2rem 2rem black;
+  transition: all .3s;
+}
+
+.about-img:hover {
+  transform: scale(1.1);
+  z-index: 2;
+}
+
+.about__container > .about-img:first-child,
+.about__container > .about-img:last-child {
+  @media (max-width:48em) {
+    width:100%;
+  }
+} 
+
+
+.about__container > .about-img:nth-child(2),
+.about__container > .about-img:nth-child(3)  {
+  @media (max-width:48em) {
+    width:0;
+    height: 0;
+    opacity: 0;
+  }
+}
+
+.about__container > .about-img:nth-child(1) {
+  grid-area: img1;  
+}
+
+.about__container > .about-img:nth-child(2) {
+  grid-area: img2;   
+}
+
+.about__container > .about-img:nth-child(3) {
+  grid-area: img3;  
+}
+
+.about__container > .about-img:nth-child(4) {
+  grid-area: img4;
+}

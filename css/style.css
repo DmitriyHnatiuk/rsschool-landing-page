@@ -1,0 +1,12 @@
+@import "./variables.css";
+@import "./reset.css";
+
+@import "./utilities.css";
+@import "./layout.css";
+
+@import "./header.css";
+@import "./hero.css";
+@import "./favorite.css";
+@import "./about.css";
+@import "./mobile.css";
+@import "./footer.css";

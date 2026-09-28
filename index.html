@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" sizes="32x32" href="favicon.png" type="image/svg+xml">
+
+  <link rel="alternate icon" href="favicon.png" type="image/x-icon">
+
+  <link rel="apple-touch-icon" sizes="52x52" href="assets/icons/apple-touch-icon.png">
+
+  <link href="https://fonts.googleapis.com/css?family=Inter" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="./js/theme.js" defer></script>
+  <script src="index.js" defer></script>
+
+  <title>Landing page</title>
+  <script>
+    if (localStorage.getItem('site-theme') === 'dark') {
+      document.documentElement.classList.add('dark-theme');
+    }
+  </script>
+</head>
+
+<body>
+  <header class="header">
+    <input type="checkbox" id="mobile-menu-bth" class="menu__mobile--input">
+
+    <label for="mobile-menu-bth" class="menu__mobile--btn">
+      <span class="menu__mobile--icon">&nbsp;</span>
+    </label>
+    <span class="menu__mobile--background">&nbsp;</span>
+
+    <div class="header__container">
+      <div class="logo">
+        <a href="index.html" class="logo__icon" aria-label="Logo"></a>
+      </div>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="#favorite">Favorite coffee</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#mobile">Mobile app</a></li>
+          <li><a href="#contact">Contact us</a></li>
+        </ul>
+
+      </nav>
+      <div class="header__button__container">
+        <div class="theme-switcher">
+          <input type="checkbox" id="theme-toggle" class="theme-switcher__input">
+          <label for="theme-toggle" class="theme-switcher__label">
+            <span class="theme-switcher__icon theme-switcher__icon--sun">
+              &#9728;
+            </span>
+            <span class="theme-switcher__icon theme-switcher__icon--moon">
+              &#9789;
+            </span>
+          </label>
+        </div>
+
+        <a href="./pages/menu.html" class="btn-menu">Menu</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <section class="hero">
+      <div class="hero__container">
+        <h1 class="hero__title u-text-xxl">
+          <strong class="u-accent">Enjoy</strong>
+          premium coffee at our charming cafe
+        </h1>
+        <h2 class="hero__text u-text-m">
+          With its inviting atmosphere and delicious coffee options, the Coffee House Resource is a popular destination
+          for coffee lovers and those seeking a warm and inviting space to enjoy their favorite beverage.
+        </h2>
+        <a href="./pages/menu.html" class="hero__btn">Menu</a>
+      </div>
+    </section>
+
+
+    <section class="favorite" id="favorite">
+      <h2 class="favorite__tile u-text-xl">
+        Choose your <strong class="u-accent">favorite</strong> coffee
+      </h2>
+
+      <div class="favorite__slider u-margin-top-s">
+        <div class="favorite__slider__container">
+
+          <button id="slider-prev" type="button" class="u-text-l u-round-button"><span>&larr;</span></button>
+
+          <ul class="slider__list u-padding-bottom-l">
+
+            <li class="slider__list__item">
+              <img src="./assets/images/coffee-slider-1.png" alt="coffee slider 1 img" loading="lazy">
+              <h3 class="slider__item--title u-margin-top-s u-text-l">S'mores Frappuccino</h3>
+              <p class="u-text-m u-margin-top-s u-box-40">
+                This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat
+                milk.
+              </p>
+              <h3 class="slider__item__price u-margin-top-s u-text-l">$5.50</h3>
+            </li>
+
+            <li class="slider__list__item">
+              <img src="./assets/images/coffee-slider-2.png" alt="coffee slider 2 img" loading="lazy">
+              <h3 class="slider__item--title u-margin-top-s u-text-l">Caramel Macchiato</h3>
+              <p class="u-text-m u-margin-top-s u-box-40">
+                Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream under whipped thick
+                foam.
+              </p>
+              <h3 class="slider__item__price u-margin-top-s u-text-l">$5.50</h3>
+            </li>
+
+            <li class="slider__list__item">
+              <img src="./assets/images/coffee-slider-3.png" alt="coffee slider 3 img" loading="lazy">
+
+              <h3 class="slider__item--title u-margin-top-s u-text-l">Ice coffee</h3>
+              <p class="u-text-m u-margin-top-s u-box-40">
+                A popular summer drink that tones and invigorates. Prepared from coffee, milk and ice.
+              </p>
+              <h3 class="slider__item__price u-margin-top-s u-text-l">$5.00</h3>
+            </li>
+          </ul>
+
+          <button id="slider-next" type="button" class="u-text-l u-round-button">
+            <span>&rarr;</span>
+          </button>
+
+        </div>
+
+        <div id="slider-pagination" class="slider--buttons">
+          <span data-index="1" class="slider__indicators active">&nbsp;</span>
+          <span data-index="2" class="slider__indicators">&nbsp;</span>
+          <span data-index="3" class="slider__indicators">&nbsp;</span>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <h2 class="about__text u-text-xl">
+        Resource is <span class="u-accent">the perfect and cozy place</span> where you can enjoy a variety of hot
+        beverages, relax, catch up with friends, or get some work done.
+      </h2>
+      <div class="about__container">
+        <img class="about-img" src="./assets/images/about-1.jpg" alt="Img about 1" loading="lazy">
+        <img class="about-img" src="./assets/images/about-2.jpg" alt="Img about 2" loading="lazy">
+        <img class="about-img" src="./assets/images/about-3.jpg" alt="Img about 3" loading="lazy">
+        <img class="about-img" src="./assets/images/about-4.jpg" alt="Img about 4" loading="lazy">
+      </div>
+    </section>
+
+
+
+    <section class="mobile" id="mobile">
+      <div class="mobile__container">
+        <h2 class="mobile--title u-text-xl">
+          <span class="u-accent">Download</span> our app to start ordering
+        </h2>
+        <p class="mobile--text u-text-m">
+          Download the resource app today and experience the comfort of ordering your favorite coffee from wherever you
+          are.
+        </p>
+
+        <div class="mobile__link__container">
+          <a href="#" class="mobile__link app-store">
+            <p class="link-title">
+              <span class="u-text-s">Available on the</span>
+              <span class="u-text-m">App Store</span>
+            </p>
+          </a>
+
+          <a href="#" class="mobile__link google-play">
+            <p class="link-title">
+              <span class="u-text-s">Available on</span>
+              <span class="u-text-m">Google Play</span>
+            </p>
+          </a>
+        </div>
+      </div>
+      <img class="mobile--img" src="./assets/images/mobile-screens.png" alt="mobile" loading="lazy">
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="footer__container" id="contact">
+      <div class="footer__brand">
+        <div class="footer__slogan">
+          <h2 class="footer__title"> Sip, Savor, Smile</h2>
+          <h2 class="footer__title">
+            <strong class="u-accent">It's coffee time!</strong>
+          </h2>
+        </div>
+        <div class="footer__socials">
+          <a href="https://twitter.com" target="_blank" class="footer__socials--twitter" aria-label="Twitter"></a>
+
+          <a href="https://instagram.com" target="_blank" class="footer__socials--instagram" aria-label="Instagram"></a>
+
+          <a href="https://facebook.com" target="_blank" class="footer__socials--facebook" aria-label="Facebook"></a>
+        </div>
+      </div>
+
+      <div class="footer__contacts">
+        <h3 class="footer__contacts--title">Contact us</h3>
+
+        <div class="footer__contacts--list">
+          <a href="https://maps.app.goo.gl/gk7T9Ak3BX2JQmJ17" target="_blank" class="footer__contacts--map">
+            <span class="contact">8558 Green Rd., LA</span>
+          </a>
+
+          <a href="tel:+16035550123" class="footer__contacts--tel">
+            <span class="contact">+1 (603) 555-0123</span>
+          </a>
+
+          <h3 class="footer__contacts--time">
+            <span class="contact">Mon-Sat: 9:00-23:00</span>
+          </h3>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

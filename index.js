@@ -3,19 +3,13 @@ const slider_button_next = document.getElementById('slider-next');
 const slider_button_prev = document.getElementById("slider-prev");
 const pagination_buttons = document.getElementById('slider-pagination');
 
-const { children: sliders } = slider_list;
-const { children: pagination } = pagination_buttons;
-
-const length = sliders.length;
-
 function updatePaginationButtons(index) {
-  [...pagination].map(e => {
+  [...pagination_buttons.children].map(e => {
     e.classList.toggle('active', e.dataset.index === index);
   })
 }
 
 function updateSlider(slide) {
-  console.log({ slide });
   slide.scrollIntoView({
     behavior: 'smooth',
     block: 'nearest',
@@ -24,6 +18,7 @@ function updateSlider(slide) {
 }
 
 function getSlideByDirection(index) {
+  const length = slider_list.children.length;
 
   if( index < 0 || index === length ) return;
 
@@ -31,19 +26,19 @@ function getSlideByDirection(index) {
 
   updateSlider(slide);
 
-  updatePaginationButtons(String(index))
-
-
+  updatePaginationButtons(String(index));
 }
 
+
+const pagination = pagination_buttons?.children || []; 
 [...pagination].map((button, index) => button.addEventListener('click', () => {
 
-  updateSlider(sliders[index]),
+  updateSlider(slider_list.children[index]),
   updatePaginationButtons(button.dataset.index)
 
 }));
 
-slider_button_next.addEventListener("click", () => {
+slider_button_next?.addEventListener("click", () => {
   const current_dot = document.querySelector('.slider__indicators.active');
   const current_index = current_dot.dataset.index;
 
@@ -52,7 +47,7 @@ slider_button_next.addEventListener("click", () => {
   getSlideByDirection(next_index);
 })
 
-slider_button_prev.addEventListener("click", () => {
+slider_button_prev?.addEventListener("click", () => {
   const current_dot = document.querySelector('.slider__indicators.active');
   const current_index = current_dot.dataset.index;
 
@@ -60,5 +55,5 @@ slider_button_prev.addEventListener("click", () => {
   
   getSlideByDirection(next_index);
 
-})
+});
 

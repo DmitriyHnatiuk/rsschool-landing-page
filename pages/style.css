@@ -74,10 +74,16 @@
 
 .menu__container {
   display: flex;
-  overflow: hidden;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none; 
   margin-top: 2rem;
   margin-bottom: 4rem;
   position: relative;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .menu__list {
@@ -110,6 +116,12 @@
   border-radius: 3rem;
   overflow: hidden;
   text-align: start;
+  cursor: pointer;
+  transition: all .2s;
+
+  &:hover {
+    transform: scale(.9);
+  }
 
   @media screen and (max-width: 48em) {
     width: 48%;

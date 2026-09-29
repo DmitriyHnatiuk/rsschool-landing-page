@@ -1,6 +1,6 @@
 const coffee_btn = document.getElementById('coffee-btn');
 const tee_btn = document.getElementById('tee-btn');
-const desert_btn = document.getElementById('desert-btn');
+const dessert_btn = document.getElementById('dessert-btn');
 
 const coffee_list = document.getElementById('coffee-list');
 const tee_list = document.getElementById('tee-list');
@@ -13,14 +13,14 @@ const modal_bg = document.getElementById('modal-bg')
 
 
 function updateSlider(slide) {
-  slide.scrollIntoView({
-    behavior: 'smooth',
-    block: 'nearest',
-    inline: 'start'
+  menu.scrollTo({
+    left: slide.offsetLeft,
+    top: 0, 
+    behavior: 'smooth'
   });
 };
 
-desert_btn.addEventListener('change', () => updateSlider(dessert_list));
+dessert_btn.addEventListener('change', () => updateSlider(dessert_list));
 coffee_btn.addEventListener('change', () => updateSlider(coffee_list));
 tee_btn.addEventListener('change', () => updateSlider(tee_list));
 

@@ -4,7 +4,7 @@ const desert_btn = document.getElementById('desert-btn');
 
 const coffee_list = document.getElementById('coffee-list');
 const tee_list = document.getElementById('tee-list');
-const desert_list = document.getElementById('desserts-list');
+const dessert_list = document.getElementById('desserts-list');
 
 const menu = document.getElementById('menu-container');
 const modal_container = document.getElementById('modal-container');
@@ -18,29 +18,36 @@ function updateSlider(slide) {
     block: 'nearest',
     inline: 'start'
   });
-}
+};
 
-desert_btn.addEventListener('change', () => updateSlider(desert_list));
+desert_btn.addEventListener('change', () => updateSlider(dessert_list));
 coffee_btn.addEventListener('change', () => updateSlider(coffee_list));
 tee_btn.addEventListener('change', () => updateSlider(tee_list));
 
 
 
-menu.addEventListener('click', (e) => {
+const handleEsc = (e) => {
+  if (e.key === 'Escape') closeModal();
+};
+
+function openModal() {
   modal_container ?
     modal_container.classList.remove('is-hidden') :
     console.warn(' modal_container  not found!');
 
   document.documentElement.style.overflow = 'hidden';
+  window.addEventListener('keydown', handleEsc);
+};
 
-})
-function closeModal (){
+function closeModal() {
   modal_container ?
     modal_container.classList.add('is-hidden') :
     console.warn(' modal_container  not found!');
-  
   document.documentElement.style.overflow = '';
+  window.removeEventListener('keydown', handleEsc);
 }
+
+menu.addEventListener('click', openModal);
 
 close_modal.addEventListener('click', closeModal);
 modal_bg.addEventListener('click', closeModal)

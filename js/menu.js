@@ -1,7 +1,7 @@
 import { createMenuList, createModal } from "./component.js";
 
 const coffee_btn = document.getElementById('coffee-btn');
-const tee_btn = document.getElementById('tee-btn');
+const tea_btn = document.getElementById('tea-btn');
 const dessert_btn = document.getElementById('dessert-btn');
 
 const menu = document.getElementById('menu-container');
@@ -68,7 +68,7 @@ function listeners(stor) {
 
   menu.addEventListener('click', openModal);
   coffee_btn.addEventListener('change', () => updateSlider(coffee_list));
-  tee_btn.addEventListener('change', () => updateSlider(tea_list));
+  tea_btn.addEventListener('change', () => updateSlider(tea_list));
   dessert_btn.addEventListener('change', () => updateSlider(dessert_list));
 
   modal_bg.addEventListener('click', closeModal);

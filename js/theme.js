@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function closeMenu(e) {
-    if (!e.key && (!e.target.hash || !mobile_menu_bth.checked)) return;
+    if ((!e?.key && (!e?.target.hash || !mobile_menu_bth.checked))) return;
 
     mobile_menu_bth.checked = false;
     document.documentElement.style.overflow = ''

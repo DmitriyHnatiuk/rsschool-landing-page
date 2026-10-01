@@ -16,7 +16,10 @@
 .slider__list {
   display: flex;
   gap: 5rem;
-  width: 80%;
+  width: 100%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none; 
 
   .slider__list__item {
     min-width: 100%;
@@ -30,13 +33,18 @@
     }
   }
 }
+
+#slider_list::-webkit-scrollbar {
+    display: none;
+}
+
 .slider--buttons {
     width: 100%;
     height: 5rem;
     background: var(--color-bg-page);
     z-index: 3;
     position: relative;
-    top: -5rem;
+    cursor: pointer;
 }
 
 .slider--buttons > span:not(:last-child) {

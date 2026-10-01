@@ -39,7 +39,7 @@
         <a href="index.html" class="logo__icon" aria-label="Logo"></a>
       </div>
       <nav class="nav">
-        <ul class="nav__list">
+        <ul class="nav__list" id="navigation">
           <li><a href="#favorite">Favorite coffee</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#mobile">Mobile app</a></li>
@@ -92,7 +92,7 @@
 
           <button id="slider-prev" type="button" class="u-text-l u-round-button"><span>&larr;</span></button>
 
-          <ul class="slider__list u-padding-bottom-l">
+          <ul class="slider__list u-padding-bottom-l" id="slider_list">
 
             <li class="slider__list__item">
               <img src="./assets/images/coffee-slider-1.png" alt="coffee slider 1 img" loading="lazy">
@@ -132,9 +132,9 @@
         </div>
 
         <div id="slider-pagination" class="slider--buttons">
-          <span data-index="1" class="slider__indicators active">&nbsp;</span>
+          <span data-index="0" class="slider__indicators active">&nbsp;</span>
+          <span data-index="1" class="slider__indicators">&nbsp;</span>
           <span data-index="2" class="slider__indicators">&nbsp;</span>
-          <span data-index="3" class="slider__indicators">&nbsp;</span>
         </div>
 
       </div>
